@@ -1,4 +1,3 @@
-from turtle import onclick
 from warnings import filterwarnings
 filterwarnings("ignore")
 

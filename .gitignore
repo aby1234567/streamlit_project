@@ -2,11 +2,8 @@
 /pandasai.log
 /connection_handlers/__pycache__
 /common_functions/__pycache__
-/.streamlit/secrets.toml
-/.streamlit/config.toml
 /__pycache__
 /critical.log
 /error.log
 /info.log
 /warning.log 
-/uploads/*

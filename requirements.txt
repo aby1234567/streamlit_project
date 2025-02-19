@@ -2,3 +2,5 @@ streamlit_local_storage
 localStoragePy
 pandasai == 2.1.1
 streamlit
+sentence-transformers
+pandas == 2.2.3
