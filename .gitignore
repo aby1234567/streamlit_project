@@ -2,6 +2,7 @@
 /pandasai.log
 /connection_handlers/__pycache__
 /common_functions/__pycache__
+/.streamlit/*
 /__pycache__
 /critical.log
 /error.log
