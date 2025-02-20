@@ -186,6 +186,7 @@ if auth:
                 st.error(documents_parse[0])
         
         # print(st.session_state)
+        st.sidebar.button('Logout',on_click=au.logout)
 
     except Exception as e:
         error = tb.format_exc()

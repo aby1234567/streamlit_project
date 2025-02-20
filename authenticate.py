@@ -37,21 +37,21 @@ def login_page():
         ls = LocalStorage()
 
         def add_user():
-            try:
-                user_list=ast.literal_eval(lc.getItem('username_list'))
-            except:
-                user_list=[]
-            if username in user_list:
+            # user = lc.getItem(username)
+            if lc.getItem(username):
                 st.toast('Username already exists')
             else:
-                user_list.append(username)
-                lc.setItem('username_list',user_list)
+                # user_list.append(username)
+                # lc.setItem('username_list',user_list)
                 lc.setItem(username,{'password':f"{password}{secrets['PASSWORD_INCREMENT']}"})
                 st.toast('Username added successfully')
                 st.session_state.login_page='Login Page'
 
         def change_state():
             st.session_state.login_page='Sign Up'
+        
+        def change_state2():
+            st.session_state.login_page='Login Page'
 
         def checker():
             u=lc.getItem(username)#+st.secrets['PASSWORD_INCREMENT']
@@ -138,11 +138,14 @@ def login_page():
                 enable_sub=True
                 if username and password:
                     enable_sub=False
-                cols[1].button("Submit",on_click=add_user,disabled=enable_sub)
+                cols2=cols[1].columns([0.15]*7)
+                cols2[0].button("<- Back",on_click=change_state2)
+                cols2[1].button("Submit",on_click=add_user,disabled=enable_sub)
 
-
-
-
+def logout():
+    ls=LocalStorage()
+    ls.deleteAll()
+    st.session_state.auth=False
         
     
 

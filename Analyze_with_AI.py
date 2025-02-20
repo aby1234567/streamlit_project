@@ -112,6 +112,8 @@ if auth :
                     bot_message.markdown(response)
                 # Add assistant response to chat history
                 st.session_state.messages.append({"role": "assistant", "content": response})
+        
+        
             
         elif st.session_state.data[file]['status']==500:
             st.error(st.session_state.data[file]['data'])
@@ -119,3 +121,5 @@ if auth :
         
         else:
             pass
+    
+    st.sidebar.button('Logout',on_click=au.logout)
