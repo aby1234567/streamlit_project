@@ -40,6 +40,8 @@ def login_page():
             # user = lc.getItem(username)
             if lc.getItem(username):
                 st.toast('Username already exists')
+            elif password!=check_password:
+                st.toast('Passwords do not match, please try again')
             else:
                 # user_list.append(username)
                 # lc.setItem('username_list',user_list)
@@ -135,6 +137,7 @@ def login_page():
                 cols = st.columns([0.2,0.6,0.2])
                 username=cols[1].text_input('Enter Username')
                 password=cols[1].text_input('Enter Password',type='password')
+                check_password=cols[1].text_input('Enter Password Again',type='password')
                 enable_sub=True
                 if username and password:
                     enable_sub=False
