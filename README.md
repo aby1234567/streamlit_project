@@ -1,7 +1,7 @@
 # Streamlit Project
 
-This is an experimental project to check out the features provided by streamlit./n
-You'll have to create a username to access the pages./n
+This is an experimental project to check out the features provided by streamlit.<br>
+You'll have to create a username to access the pages.<br>
 Make sure to replace the API secrets in the secrets.toml file
 
 ## Login
