@@ -7,7 +7,7 @@ Make sure to replace the API secrets in the secrets.toml file
 
 ## Pages
 
-- 1. Analyze with AI
+- 1.Analyze with AI
 
 Checks out the PandasAI library that converses with available LLM's. I've used the LLM provided by [GROQ](https://console.groq.com/login) 
 
